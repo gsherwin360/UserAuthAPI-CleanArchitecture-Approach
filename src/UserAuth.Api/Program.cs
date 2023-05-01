@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
     // Add here the new services to the container
     builder.Services
         .AddApplication()
-        .AddInfrastructure();
+        .AddInfrastructure(builder.Configuration);
 }
 
 var app = builder.Build();
